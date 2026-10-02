@@ -29,11 +29,9 @@ class MainActivity : Activity() {
     override fun onStart() {
         super.onStart()
         // 어색하게 계속 흔들리고 커졌다 작아지는 글자들
-        wobble(R.id.top, View.ROTATION, -6f, 6f, 600)
         wobble(R.id.title, View.ROTATION, 5f, -5f, 450)
         wobble(R.id.title, View.SCALE_X, 1f, 1.15f, 300)
         wobble(R.id.title, View.SCALE_Y, 1f, 1.15f, 300)
-        wobble(R.id.sub, View.ROTATION, -4f, 4f, 700)
         wobble(R.id.startButton, View.SCALE_X, 1f, 1.2f, 400)
         wobble(R.id.startButton, View.SCALE_Y, 1f, 1.2f, 400)
         animators.forEach { it.start() }
