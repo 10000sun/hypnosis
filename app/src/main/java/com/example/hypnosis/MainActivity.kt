@@ -16,8 +16,8 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // 파스텔 무지개 대각선 그라데이션
-        val colors = intArrayOf("#FF8A80", "#FFC85A", "#FFFF70", "#A0FF9A", "#6FD8FF", "#7B7BFF", "#E879C8")
+        // 쨍한 원색 무지개 대각선 그라데이션
+        val colors = intArrayOf("#FF0000", "#FF00FF", "#0000FF", "#00FFFF", "#00FF00", "#FFFF00", "#FF8000")
             .map { Color.parseColor(it) }.toIntArray()
         findViewById<View>(R.id.mainRoot).background =
             GradientDrawable(GradientDrawable.Orientation.TL_BR, colors)
@@ -28,11 +28,14 @@ class MainActivity : Activity() {
 
     override fun onStart() {
         super.onStart()
-        val title = findViewById<View>(R.id.title)
-        val button = findViewById<View>(R.id.startButton)
-        animators += ObjectAnimator.ofFloat(title, View.ROTATION, -3f, 3f).apply { wobble(900) }
-        animators += ObjectAnimator.ofFloat(button, View.SCALE_X, 1f, 1.12f).apply { wobble(500) }
-        animators += ObjectAnimator.ofFloat(button, View.SCALE_Y, 1f, 1.12f).apply { wobble(500) }
+        // 어색하게 계속 흔들리고 커졌다 작아지는 글자들
+        wobble(R.id.top, View.ROTATION, -6f, 6f, 600)
+        wobble(R.id.title, View.ROTATION, 5f, -5f, 450)
+        wobble(R.id.title, View.SCALE_X, 1f, 1.15f, 300)
+        wobble(R.id.title, View.SCALE_Y, 1f, 1.15f, 300)
+        wobble(R.id.sub, View.ROTATION, -4f, 4f, 700)
+        wobble(R.id.startButton, View.SCALE_X, 1f, 1.2f, 400)
+        wobble(R.id.startButton, View.SCALE_Y, 1f, 1.2f, 400)
         animators.forEach { it.start() }
     }
 
@@ -42,9 +45,11 @@ class MainActivity : Activity() {
         super.onStop()
     }
 
-    private fun ValueAnimator.wobble(ms: Long) {
-        duration = ms
-        repeatCount = ValueAnimator.INFINITE
-        repeatMode = ValueAnimator.REVERSE
+    private fun wobble(id: Int, prop: android.util.Property<View, Float>, from: Float, to: Float, ms: Long) {
+        animators += ObjectAnimator.ofFloat(findViewById<View>(id), prop, from, to).apply {
+            duration = ms
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+        }
     }
 }

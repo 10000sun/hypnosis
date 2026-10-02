@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,24 +13,65 @@
         android:orientation="vertical"
         android:padding="24dp">
 
-        <com.example.hypnosis.ArchTitleView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
+        <com.example.hypnosis.OutlineTextView
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="48dp" />
+            android:padding="8dp"
+            android:text="@string/top"
+            android:textColor="#FFEB00"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:strokeColor="#FF0000"
+            app:strokeWidth="7dp" />
+
+        <com.example.hypnosis.OutlineTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/title"
+            android:textColor="#1A1AFF"
+            android:textSize="68sp"
+            android:textStyle="bold"
+            app:strokeColor="#FF0000"
+            app:strokeWidth="14dp" />
+
+        <com.example.hypnosis.OutlineTextView
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:padding="8dp"
+            android:text="@string/sub"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:strokeColor="#00AA00"
+            app:strokeWidth="6dp" />
 
         <Button
             android:id="@+id/startButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bubble_button"
-            android:paddingStart="56dp"
-            android:paddingTop="20dp"
-            android:paddingEnd="56dp"
-            android:paddingBottom="20dp"
+            android:background="@drawable/tacky_button"
+            android:paddingStart="48dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="48dp"
+            android:paddingBottom="16dp"
             android:text="@string/start"
-            android:textColor="#000000"
-            android:textSize="28sp"
+            android:textColor="#D50000"
+            android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:text="@string/bottom"
+        android:textColor="#D50000"
+        android:textSize="14sp" />
 </FrameLayout>

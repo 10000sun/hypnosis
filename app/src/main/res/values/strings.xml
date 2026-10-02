@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">최면 어플</string>
     <string name="title">최면 어플</string>
+    <string name="top">당신을 빠져들게 할</string>
+    <string name="sub">눌러보세요*^^*</string>
     <string name="start">최면 실행</string>
+    <string name="bottom">구독과 좋아요 해줄거지?</string>
 </resources>
