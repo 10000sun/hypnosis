@@ -17,7 +17,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // 쨍한 원색 무지개 대각선 그라데이션
-        val colors = intArrayOf("#FF0000", "#FF00FF", "#0000FF", "#00FFFF", "#00FF00", "#FFFF00", "#FF8000")
+        val colors = arrayOf("#FF0000", "#FF00FF", "#0000FF", "#00FFFF", "#00FF00", "#FFFF00", "#FF8000")
             .map { Color.parseColor(it) }.toIntArray()
         findViewById<View>(R.id.mainRoot).background =
             GradientDrawable(GradientDrawable.Orientation.TL_BR, colors)
