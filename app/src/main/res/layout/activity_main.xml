@@ -23,7 +23,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:strokeColor="#FF0000"
-            app:strokeWidth="7dp" />
+            app:strokeWidth="5dp" />
 
         <com.example.hypnosis.OutlineTextView
             android:id="@+id/title"
@@ -35,7 +35,7 @@
             android:textSize="68sp"
             android:textStyle="bold"
             app:strokeColor="#FF0000"
-            app:strokeWidth="14dp" />
+            app:strokeWidth="8dp" />
 
         <com.example.hypnosis.OutlineTextView
             android:id="@+id/sub"
@@ -48,7 +48,7 @@
             android:textSize="40sp"
             android:textStyle="bold"
             app:strokeColor="#00AA00"
-            app:strokeWidth="6dp" />
+            app:strokeWidth="4dp" />
 
         <Button
             android:id="@+id/startButton"
@@ -65,13 +65,4 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="24dp"
-        android:text="@string/bottom"
-        android:textColor="#D50000"
-        android:textSize="14sp" />
 </FrameLayout>
