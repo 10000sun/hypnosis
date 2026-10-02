@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingStart="48dp"
-        android:paddingEnd="48dp"
-        android:text="@string/start"
-        android:textSize="22sp" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
+            android:shadowColor="#000000"
+            android:shadowDx="6"
+            android:shadowDy="6"
+            android:shadowRadius="2"
+            android:text="@string/title"
+            android:textSize="72sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rainbow_button"
+            android:paddingStart="56dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="56dp"
+            android:paddingBottom="20dp"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="1"
+            android:text="@string/start"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 </FrameLayout>
