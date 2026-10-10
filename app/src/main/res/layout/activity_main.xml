@@ -43,4 +43,12 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- [광고 영역] 메인 화면 전용 배너. 최면 화면(터치로 종료)에는 광고를 넣지 말 것: 실수 클릭 정책 위반 -->
+    <FrameLayout
+        android:id="@+id/adContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:minHeight="50dp" />
+
 </FrameLayout>
